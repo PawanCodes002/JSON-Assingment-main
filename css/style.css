@@ -1,0 +1,398 @@
+:root {
+  --th-bg: ;
+}
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/img2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.header {
+  background-color: rgb(255, 255, 255);
+
+  text-align: center;
+  margin: 0px;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: rgb(27, 27, 31);
+  z-index: 40;
+  height: fit-content;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#navbar a.active {
+  /*background-color: #1c1f1c93;*/
+  color: rgb(255, 255, 255);
+}
+
+.adbtn {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+.content {
+  padding: 40px !important;
+  margin-bottom: 6%;
+  background-color: rgba(5, 5, 5, 0.897);
+
+  box-shadow: 2px 2px rgba(196, 189, 189, 0.322);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 9% !important;
+}
+.edb {
+  box-shadow: #9e6959;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+  background: none;
+}
+p {
+  margin: 0px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  overflow: hidden;
+  width: 80%;
+  text-overflow: ellipsis;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+i {
+  color: rgb(255, 255, 255);
+}
+footer {
+  z-index: 40;
+  background-color: rgba(10, 11, 12, 0.952);
+  height: 8%;
+  color: rgb(10, 23, 59);
+}
+.foot-con {
+  font-size: 18px;
+  padding: 5px 0px;
+  float: none;
+}
+.foot-con > p {
+  width: fit-content;
+  padding: 0px auto;
+  margin: 0px auto;
+  /*background-color: #1c1f1c93;*/
+  font-weight: 300;
+  height: 100%;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky-foot {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement 
+(as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky-foot + .content-foot {
+  padding-bottom: 51px;
+}
+
+/*for Delete Modal*/
+
+/* Set a style for all buttons */
+.mdbutton {
+  color: rgb(255, 255, 255);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+  opacity: 0.9;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 18px;
+}
+
+.mdbutton:hover {
+  opacity: 1;
+  color: #fefefe;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn,
+.deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: rgba(90, 63, 5, 0.945);
+  color: white;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: rgb(109, 173, 209);
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 41; /* Sit on top */
+  left: 0;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #8b8181fa;
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.61);
+  color: aliceblue;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 45%; /* Could be more or less, depending on screen size */
+  padding: 45px;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .tophead {
+    margin-top: 10%;
+  }
+  .sticky + .content {
+    padding-top: 40% !important;
+    margin-bottom: 15%;
+  }
+  .f786 {
+    border-bottom: 2px inset rgb(255, 255, 255);
+    padding: 4%;
+  }
+}
+input {
+  color: rgb(255, 255, 255);
+}
+.mdcontain {
+  padding: 40px;
+  border-radius: 18px;
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .deletebtn {
+    width: 100%;
+  }
+}
+
+/*Styles for update modal*/
+/* Set a style for all buttons */
+
+/* Add a color to the cancel button */
+.updcancelbtn {
+  color: white;
+}
+
+/* Add a color to the delete button */
+
+/*Alert Modal Sart*/
+
+/* The modalalert (background) */
+.modalalert {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 43; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(150, 140, 140); /* Fallback color */
+}
+
+/* modalalert Content */
+.modalalert-content {
+  position: relative;
+  background-color: rgba(133, 142, 172, 0.37);
+  margin: auto;
+  border: 3px solid rgb(221, 210, 210);
+  width: 35%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  font-size: larger;
+  animation-duration: 0.4s;
+  border-radius: 8px;
+  border: 1px solid rgb(10, 23, 59);
+  z-index: 42;
+}
+@media (max-width: 768px) {
+  .modalalert-content {
+    width: 100%;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalalert-header {
+  padding: 10px 16px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.modalalert-body {
+  padding: 10% 2%;
+  font-size: 20px;
+  color: #000;
+}
+.modalalert-body > p {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+}
+.modalalert-footer {
+  padding: 10px 0px;
+  background-color: rgb(0, 0, 0);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: white;
+  right: 0;
+  margin: auto;
+  padding: 10px 16px;
+}
+.btn-light {
+  color: #000;
+}
+.inner {
+  width: fit-content;
+  margin: auto;
+  padding: auto;
+}
+/*Alert Modal End*/
+.emcol {
+  padding-top: 10px;
+}
+.emcol > p {
+  text-align: center !important;
+  padding: 6px;
+  width: 100%;
+}
+.tophead {
+  margin-top: 5px;
+  font-weight: bold;
+  border-top: 2px groove rgb(255, 255, 255);
+  border-bottom: 2px groove rgb(255, 255, 255);
+}
+
+.row {
+  align-items: center;
+  justify-content: center;
+}
+.form-control {
+  background-color: rgb(28 28 33 / 32%) !important;
+  color: rgb(255, 255, 255) !important;
+  border: 2px solid white;
+}
+div {
+  align-content: center;
+}
+.col-md-2,
+.col-md-3,
+.col-md-1,
+.col-md-6 {
+  margin: 0px;
+  padding: auto 50%;
+  align-content: center;
+  justify-content: center;
+}
+.counter {
+  text-decoration: underline;
+  font-size: 14px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
